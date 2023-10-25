@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {ErrorBoundary} from "react-error-boundary";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ErrorBoundary  fallback={<div>Something went wrong</div>}>
+        <div className="App">
+            <div>🌤️</div>
+            <div className="verticalLine"></div>
+            <div className="info">
+                <div>-10&deg;C</div>
+                <div>Екатеринбург</div>
+            </div>
+        </div>
+      </ErrorBoundary>
   );
 }
 

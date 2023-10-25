@@ -1,0 +1,13 @@
+.App{
+  display: flex;
+  flex-direction: row;
+
+  .verticalLine {
+    border-left: 3px solid grey;
+    width: 1px;
+    align-items: stretch;
+  }
+  .info {
+
+  }
+}
