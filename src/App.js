@@ -6,7 +6,7 @@ function App() {
       <ErrorBoundary  fallback={<div>Something went wrong</div>}>
         <div className="App">
             <div className="vidget">
-                <div>🌤️</div>
+                <div className="emoji_weather_state">🌤️</div>
                 <div className="verticalLine"></div>
                 <div className="info">
                     <div>-10&deg;C</div>
