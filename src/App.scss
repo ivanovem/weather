@@ -1,13 +1,27 @@
 .App{
-  display: flex;
-  flex-direction: row;
+  background-image: url("./image/ekb.jpg");
+  background-size: contain;
+  height: 675px;
+  width: 900px;
+  .vidget {
+    width: 300px;
+    height: 100px;
+    border-radius: 3px;
+    background-color: rgba(255, 0, 0, 0.2);
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .info {
+      padding-left: 10px;
+
+    }
+  }
 
   .verticalLine {
-    border-left: 3px solid grey;
+    border-left: 2px solid white;
     width: 1px;
     align-items: stretch;
   }
-  .info {
 
-  }
 }
