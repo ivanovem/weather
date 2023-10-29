@@ -1,10 +1,12 @@
 class WeatherApiClient {
     constructor() {
-      this.key = '62a1f4da860cfd4e9e86c4005cf6a6c9';
+      this.key = 'd8be8668e3ba727532417c7201b9a1c6';
       this.url = 'https://api.openweathermap.org/data/2.5/weather?';
     }
     
     async getWeather(lat, lon){
+        // console.log(lat);
+        // console.log(lon);
         const url = new URL(this.url);
         url.searchParams.append("lat", lat);
         url.searchParams.append("lon", lon);
@@ -14,8 +16,13 @@ class WeatherApiClient {
         
         return fetch(`${url}`)
         .then((response)=>{
-            return response.json();
+            const result = response.json();
+            console.log(result);
+            return result;
         })
+        // console.log('fake request');
+        // const result = {main: {temp: -5}};
+        // return Promise.resolve(result)
     }
 
   }
